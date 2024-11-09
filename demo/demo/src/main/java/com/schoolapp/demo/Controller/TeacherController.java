@@ -24,17 +24,17 @@ public class TeacherController {
         return teacherService.getAllTeachers();
     }
 
-    @GetMapping("/teacher/{id}")
+    @GetMapping("/{id}")
     public TeacherEntity getTeacherById(@PathVariable Integer id){
         return teacherService.getTeacherById(id);
     }
 
-    @PutMapping("/teacher/{id}")
+    @PutMapping("/{id}")
     public TeacherEntity updateTeacher( @PathVariable Integer id,@RequestBody TeacherEntity teacher){
         return teacherService.updateTeacher(id,teacher);
     }
 
-    @DeleteMapping("/teacher/{id}")
+    @DeleteMapping("/{id}")
     public void deleteTeacher(@PathVariable Integer id){
         teacherService.deleteTeacher(id);
     }
