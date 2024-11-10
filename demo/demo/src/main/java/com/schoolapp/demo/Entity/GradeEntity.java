@@ -25,11 +25,11 @@ public class GradeEntity implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "student_id")
-    private StudentEntity studentEntity;
+    private StudentEntity student;
 
     @ManyToOne
     @JoinColumn(name = "course_id")
-    private CourseEntity courseEntity;
+    private CourseEntity course;
 
     public Integer getId() {
         return id;
@@ -72,18 +72,18 @@ public class GradeEntity implements Serializable {
     }
 
     public StudentEntity getStudent() {
-        return studentEntity;
+        return student;
     }
 
     public void setStudent(StudentEntity studentEntity) {
-        this.studentEntity = studentEntity;
+        this.student = studentEntity;
     }
 
     public CourseEntity getCourse() {
-        return courseEntity;
+        return course;
     }
 
     public void setCourse(CourseEntity courseEntity) {
-        this.courseEntity = courseEntity;
+        this.course = courseEntity;
     }
 }
