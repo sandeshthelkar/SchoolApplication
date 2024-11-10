@@ -18,16 +18,16 @@ public class StudentCourseEntity implements Serializable {
     private StudentEntity studentEntity;
 
     @ManyToOne
-    @JoinColumn(name = "teacher_id",nullable = false)
-    private TeacherEntity teacherEntity;
+    @JoinColumn(name = "course_id",nullable = false)
+    private CourseEntity courseEntity;
 
     public StudentCourseEntity() {
     }
 
-    public StudentCourseEntity(Integer id, StudentEntity studentEntity, TeacherEntity teacherEntity) {
+    public StudentCourseEntity(Integer id, StudentEntity studentEntity, CourseEntity courseEntity) {
         this.id = id;
         this.studentEntity = studentEntity;
-        this.teacherEntity = teacherEntity;
+        this.courseEntity = courseEntity;
     }
 
     public Integer getId() {
@@ -46,11 +46,11 @@ public class StudentCourseEntity implements Serializable {
         this.studentEntity = studentEntity;
     }
 
-    public TeacherEntity getTeacherEntity() {
-        return teacherEntity;
+    public CourseEntity getCourseEntity() {
+        return courseEntity;
     }
 
-    public void setTeacherEntity(TeacherEntity teacherEntity) {
-        this.teacherEntity = teacherEntity;
+    public void setCourseEntity(CourseEntity courseEntity) {
+        this.courseEntity = courseEntity;
     }
 }
