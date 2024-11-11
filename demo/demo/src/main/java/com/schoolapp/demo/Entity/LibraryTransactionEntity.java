@@ -15,15 +15,72 @@ public class LibraryTransactionEntity implements Serializable {
 
     private LocalDate borrowDate;
     private LocalDate returnDate;
+    private LocalDate dueDate;
 
     @Column(nullable = false)
     private String status;
 
     @ManyToOne
-    @JoinColumn(name = "book_id")
+    @JoinColumn(name = "book_id", nullable = false)
     private LibraryBookEntity libraryBookEntity;
 
     @ManyToOne
-    @JoinColumn(name = "student_id")
+    @JoinColumn(name = "student_id",nullable = false)
     private StudentEntity studentEntity;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public LocalDate getBorrowDate() {
+        return borrowDate;
+    }
+
+    public void setBorrowDate(LocalDate borrowDate) {
+        this.borrowDate = borrowDate;
+    }
+
+    public LocalDate getReturnDate() {
+        return returnDate;
+    }
+
+    public void setReturnDate(LocalDate returnDate) {
+        this.returnDate = returnDate;
+    }
+
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public LibraryBookEntity getLibraryBookEntity() {
+        return libraryBookEntity;
+    }
+
+    public void setLibraryBookEntity(LibraryBookEntity libraryBookEntity) {
+        this.libraryBookEntity = libraryBookEntity;
+    }
+
+    public StudentEntity getStudentEntity() {
+        return studentEntity;
+    }
+
+    public void setStudentEntity(StudentEntity studentEntity) {
+        this.studentEntity = studentEntity;
+    }
 }
