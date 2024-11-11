@@ -18,7 +18,7 @@ public class LibraryBookEntity {
     @Column(unique = true)
     private String isbn;
 
-    private boolean avaliable = true;
+    private Integer available;
 
     public Integer getId() {
         return id;
@@ -52,11 +52,11 @@ public class LibraryBookEntity {
         this.isbn = isbn;
     }
 
-    public boolean isAvaliable() {
-        return avaliable;
+    public Integer getAvailable() {
+        return available;
     }
 
-    public void setAvaliable(boolean avaliable) {
-        this.avaliable = avaliable;
+    public void setAvailable(Integer available) {
+        this.available = available;
     }
 }
