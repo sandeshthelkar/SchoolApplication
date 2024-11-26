@@ -23,7 +23,7 @@ public class TeacherEntity implements Serializable {
     private String name;
 
 
-    @Column(name = "course_id")
+    @Column(name = "course_id", nullable = false)
     private Integer courseId;
 
     @Column(unique = true)
